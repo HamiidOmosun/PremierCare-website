@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PremierCare</title>
     <link rel="stylesheet" href="{{url_for('static',filename='dist/output.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
 </head>
-<body class="">
+<body class="font-work">
 
   <!--Navbar-->
 
-  <header class="bg-white py-2">
+  <header class="bg-white py-2 md:sticky md:top-0 md:z-50 ">
 
     <nav class="flex justify-between items-center md:px-15 px-5 mx-auto lg:px-30">
       <div>
@@ -20,7 +21,7 @@
           <img class="w-20 h-auto"src="{{ url_for('static', filename='assets/icons/Logo.svg')}}" alt="Logo">
         </a>
       </div>
-      <div class="nav-links duration-500 absolute md:static md:min-h-fit bg-white min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+      <div class="nav-links duration-500 absolute md:static md:min-h-fit bg-white min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 mt-5">
         <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
           <li>
             <a class="transition duration-150 border-b-2  border-transparent hover:border-blue-800" href="#home">Home</a>
@@ -70,7 +71,7 @@
 
   <!--About section-->
 
-  <section id="about" class="bg-white h-full md:px-10">
+  <section id="about" class="bg-white h-full md:px-10 lg:px-15">
     <div class="flex flex-col items-center text-center px-10 mx-auto">
       <div class="py-7 text-3xl lg:text-4xl md:max-w-[20ch] lg:max-w-[23ch]">
         <h1 class="font-bold">About <span class="text-[#16A34A]">PremierCare </span> Clinic & Diagnostics</h1>
@@ -91,7 +92,7 @@
               </p>
             </div>
 
-            <ul class="space-y-1 pb-7 text-left lg:text-2xl lg:pl-15">
+            <ul class="space-y-1 pb-7 pl-5 text-left lg:text-2xl lg:pl-15">
               <li class="flex items-center gap-2">
                 <ion-icon class="text-xl text-[#1E3A8A]"name="checkmark-outline"></ion-icon>
                 Experienced doctors & nurses
@@ -118,7 +119,7 @@
               </li>
             </ul>
             <div class="max-w-[30ch] lg:max-w-[60ch]">
-              <h1 class="mb-7 text-2xl lg:text-3xl font-bold text-[#16A34A] lg:pl-5  leading-6">
+              <h1 class="mb-7 text-2xl lg:text-3xl font-bold text-[#16A34A]   leading-6">
                 15+ Years of Trusted Medical Experience
               </h1>
             </div>
@@ -136,7 +137,23 @@
 
   <!--Services section-->
   <section>
-    
+    <div class="relative my-10">
+      <img class="w-full h-64 object-cover scale-100 md:h-64 md:scale-100 lg:h-64 lg:scale-100 "
+      src="{{ url_for('static', filename='assets/services.png')}}" alt="service_img">
+
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <div class="text-white py-5 font-bold text-xl md:text-2xl lg:p-2 lg:text-3xl">
+          <h1>Our Services</h1>
+        </div>
+
+        <div class="text-white text-center px-5 md:text-xl md:max-w-[40ch] lg:p-2 lg:text-2xl lg:max-w-[50ch]">
+          <p>At PremierCare, we provide comprehensive healthcare 
+            services under one roof — from medical consultations to 
+            diagnostic testing and pharmacy support.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
 
