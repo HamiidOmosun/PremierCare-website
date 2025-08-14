@@ -7,6 +7,9 @@
     <title>PremierCare</title>
     <link rel="stylesheet" href="{{url_for('static',filename='dist/output.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
 
 </head>
 <body class="font-work">
@@ -21,7 +24,7 @@
           <img class="w-20 h-auto"src="{{ url_for('static', filename='assets/icons/Logo.svg')}}" alt="Logo">
         </a>
       </div>
-      <div class="nav-links duration-500 absolute md:static md:min-h-fit bg-white min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 mt-5">
+      <div class="nav-links duration-500 absolute md:static md:min-h-fit bg-white min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
         <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
           <li>
             <a class="transition duration-150 border-b-2  border-transparent hover:border-blue-800" href="#home">Home</a>
@@ -35,6 +38,7 @@
           <li>
             <a class="transition duration-150 border-b-2 border-transparent hover:border-blue-800" href="#contacts">Contacts</a>
           </li>
+          <button class="bg-blue-800 text-white rounded-4xl">Book Now</button>
         </ul>
       </div>
       <div class="text-3xl text-blue-800 cursor-pointer md:hidden">
@@ -79,8 +83,8 @@
 
       <div >
         <div class="md:flex md:flex-row  md:items-center">
-          <div class="w-80 lg:w-1/2 h-auto hidden md:inline-block md:m-5">
-            <img class="lg:w-96"src="{{ url_for('static', filename='assets/researcher.png')}}" alt="Doc_image">
+          <div class="w-96 lg:w-1/2 h-auto hidden md:inline-block md:m-5">
+            <img class="lg:w-96 mx-5"src="{{ url_for('static', filename='assets/researcher.png')}}" alt="Doc_image">
           </div>
           <div class="md:flex md:flex-col md:w-1/2 md:p-5 lg:w-2/3">
             <div class="pb-7 text-base md:text-left lg:text-2xl lg:leading-8">
@@ -136,7 +140,7 @@
   </section>
 
   <!--Services section-->
-  <section>
+  <section id="services">
     <div class="relative my-10">
       <img class="w-full h-64 object-cover scale-100 md:h-64 md:scale-100 lg:h-64 lg:scale-100 "
       src="{{ url_for('static', filename='assets/services.png')}}" alt="service_img">
@@ -154,8 +158,165 @@
         </div>
       </div>
     </div>
+
+    <div class="overflow-x-auto md:overflow-x-hidden md:mx-5 md:mr-15 lg:mx-15 lg:mr-30 ">
+      <div class="flex space-x-4 mb-20 ml-10 md:grid md:grid-cols-3 md:gap-4 md:space-x-0 md:mt-10">
+        <div class="flex items-center justify-center flex-shrink-0">
+          <div class="w-64 h-64 lg:w-80 lg:h-80 border-[#1E3A8A] border-3 rounded-3xl
+                      transition-transform duration-300 md:hover:-translate-y-2 md:hover:shadow-lg">
+            <img class="w-16 h-16 m-4 lg:w-24 lg:h-24" src="{{ url_for( 'static', filename='assets/icons/medi_consult.svg')}}" alt="medi_icon">
+            <h1 class="text-lg font-bold m-4 md:text-base lg:text-xl ">Medical Consultations</h1>
+            <p class="text-base m-4 md:text-sm lg:text-lg">Experienced doctors for general and specialized care.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center flex-shrink-0">
+          <div class="w-64 h-64 lg:w-80 lg:h-80 border-[#1E3A8A] border-3 rounded-3xl
+                      transition-transform duration-300 md:hover:-translate-y-2 md:hover:shadow-lg">
+            <img class="w-16 h-16 m-4 lg:w-24 lg:h-24"src="{{ url_for( 'static', filename='assets/icons/lab_test.svg')}}" alt="medi_icon">
+            <h1 class="text-lg font-bold m-4 md:text-base lg:text-xl">Lab Testing</h1>
+            <p class="text-base m-4 md:text-sm lg:text-lg">Fast, accurate blood tests, screenings, and diagnostics.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center flex-shrink-0">
+          <div class="w-64 h-64 lg:w-80 lg:h-80 border-[#1E3A8A] border-3 rounded-3xl
+                      transition-transform duration-300 md:hover:-translate-y-2 md:hover:shadow-lg">
+            <img class="w-16 h-16 m-4 lg:w-24 lg:h-24"src="{{ url_for( 'static', filename='assets/icons/Scan.svg')}}" alt="medi_icon">
+            <h1 class="text-lg font-bold m-4 md:text-base lg:text-xl">Ultrasound Scans</h1>
+            <p class="text-base m-4 md:text-sm lg:text-lg">Affordable pregnancy and abdominal ultrasound services.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center flex-shrink-0">
+          <div class="w-64 h-64 lg:w-80 lg:h-80 border-[#1E3A8A] border-3 rounded-3xl
+                      transition-transform duration-300 md:hover:-translate-y-2 md:hover:shadow-lg">
+            <img class="w-16 h-16 m-4 lg:w-24 lg:h-24" src="{{ url_for( 'static', filename='assets/icons/Pharmacy.svg')}}" alt="medi_icon">
+            <h1 class="text-lg font-bold m-4 md:text-base lg:text-xl">Pharmacy</h1>
+            <p class="text-base m-4 md:text-sm lg:text-lg">On-site pharmacy with prescriptions and medications.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center flex-shrink-0">
+          <div class="w-64 h-64 lg:w-80 lg:h-80 border-[#1E3A8A] border-3 rounded-3xl
+                      transition-transform duration-300 md:hover:-translate-y-2 md:hover:shadow-lg">
+            <img class="w-16 h-16 m-4 lg:w-24 lg:h-24" src="{{ url_for( 'static', filename='assets/icons/Ante_serv.svg')}}" alt="medi_icon">
+            <h1 class="text-lg font-bold m-4 md:text-base lg:text-xl">Antenatal Services</h1>
+            <p class="text-base m-4 md:text-sm lg:text-lg">Friendly and affordable prenatal care for expecting mothers.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center flex-shrink-0">
+          <div class="w-64 h-64 lg:w-80 lg:h-80 border-[#1E3A8A] border-3 rounded-3xl
+                      transition-transform duration-300 md:hover:-translate-y-2 md:hover:shadow-lg">
+            <img class="w-16 h-16 m-4 lg:w-24 lg:h-24" src="{{ url_for( 'static', filename='assets/icons/covid_test.svg')}}" alt="medi_icon">
+              <h1 class="text-lg font-bold m-4 md:text-base lg:text-xl">COVID-19 Testing</h1>
+              <p class="text-base m-4 md:text-sm lg:text-lg">Safe, reliable COVID-19 PCR and rapid tests.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#1E3A8A] h-86 w-auto flex justify-center mb-10 md:h-64 md:w-auto lg:h-46 lg:w-auto">
+      <div class="flex flex-col items-center justify-center text-white space-y-1 md:grid md:grid-cols-3 md:gap-4 md:space-y-0 md:items-center md:px-10">
+        <div class="text-center">
+          <p class="underline text-3xl font-bold lg:text-4xl">1K</p>
+          <p class="lg:text-xl">Patients served</p>
+        </div>
+
+        <div class="my-5 text-center md:mx-10">
+          <p class="underline text-3xl font-bold lg:text-4xl">24/7</p>
+          <p class="lg:text-xl">Bookings available</p>
+        </div>
+
+        <div class="text-center">
+          <p class="underline text-3xl font-bold lg:text-4xl">4.9</p>
+          <p class="lg:text-xl">Rated on Google</p>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!--Contacts section-->
+  <section>
+    <h1 class="text-center text-[#16A34A] font-bold text-xl py-3">Contact Us</h1>
+    <p class="text-center text-sm px-5 mb-7">Get expert care at your convenience — choose your preferred date and time below.</p>
+    <div class="relative pb-64">
+      <div class="bg-[#F0F4FF] p-5">
+        <div class="bg-white flex flex-col mt-10 mx-5 rounded-2xl p-5">
+          <h1 class="text-center font-bold">Booking Form</h1>
+          <form class="flex flex-col space-y-2">
+            <label class="text-base" for="name">Name:</label>
+            <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Enter your Name" type="text" id="name" name="name">
+            <label class="text-base"for="email">Email:</label>
+            <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Enter your Email" type="email" id="email" name="email">  
+            <label class="text-base"for="phone">Phone:</label>
+            <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Enter your Phone Number" type="tel" id="phone" name="phone">
+            <label class="text-base"for="date">Preferred Date/Time:</label>
+            <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Select a date" id="date" name="date">
+          </form>
+          <div class="flex justify-center">
+            <button class="bg-green-700 text-white py-2 px-4 rounded-4xl my-5 w-64">Sumbit</button>
+          </div>
+        </div>
+        <div class="mb-15 p-10 space-y-2">
+          <h1 class="text-center text-xl font-bold">Get in Touch</h1>
+          <h1 class="font-bold"><ion-icon name="location-outline"></ion-icon>Address:</h1>
+          <p>123 PremierCare Street, Port Harcourt, Nigeria</p>
+          <h1 class="font-bold"><ion-icon name="call-outline"></ion-icon>Phone:</h1>
+          <p>+234 123 4567</p>
+          <h1 class="font-bold"><ion-icon name="mail-outline"></ion-icon>Email:</h1>
+          <p>PremierCare@info.com</p>
+          <h1 class="font-bold">Business Hours:</h1>
+          <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+      <div class="absolute inset-x-0 bottom-20 mx-10">
+        <div class="w-auto h-64">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.007993440192!2d6.983758474993518!3d4.815554140118994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cde8f3a98f97%3A0x1b9b8c7f8f8c5d84!2sPort%20Harcourt%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1693066179000!5m2!1sen!2sng" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--Footer-->
+  <footer class="bg-[#1E3A8A] h-auto w-auto mt-100px">
+    <div class="flex flex-col items-center">
+      <img class="w-20 h-auto m-5" src="{{ url_for('static', filename='assets/icons/white_logo.svg')}}" alt="footer_img">
+    </div>
+        <div class="flex flex-col items-center text-white p-5 text-sm space-y-2">
+          <a href="#">home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contacts</a>
+          <a href="#">Book Now</a>
+        </div>
+        <div class="flex items-center justify-center gap-5"> 
+          <div class="p-5">
+            <img src="{{ url_for('static', filename='assets/icons/insta.svg')}}" alt="instagram_icon" class="w-6 h-6">
+          </div>
+          <div class="p-5">
+            <img src="{{ url_for('static', filename='assets/icons/facebook.svg')}}" alt="facebook_icon" class="w-6 h-6">
+          </div>
+          <div class="p-5">
+            <img src="{{ url_for('static', filename='assets/icons/whatsapp.svg')}}" alt="whatsapp_icon" class="w-6 h-6">
+          </div>
+        </div>
+        <div class="text-white text-sm text-center p-5 space-y-2 ">
+          <p>© 2025 PremierCare Clinic. All rights reserved.</p>
+          <p>Privacy Policy | Terms of Service</p>
+        </div>
+  </footer>
 
 
   <script>
@@ -167,5 +328,6 @@
   </script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
 </body>
 </html>
