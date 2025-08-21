@@ -241,36 +241,42 @@
   <section>
     <h1 class="text-center text-[#16A34A] font-bold text-xl py-3">Contact Us</h1>
     <p class="text-center text-sm px-5 mb-7">Get expert care at your convenience — choose your preferred date and time below.</p>
+
     <div class="relative pb-64">
-      <div class="bg-[#F0F4FF] p-5">
-        <div class="bg-white flex flex-col mt-10 mx-5 rounded-2xl p-5">
-          <h1 class="text-center font-bold">Booking Form</h1>
-          <form class="flex flex-col space-y-2">
-            <label class="text-base" for="name">Name:</label>
-            <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Enter your Name" type="text" id="name" name="name">
-            <label class="text-base"for="email">Email:</label>
-            <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Enter your Email" type="email" id="email" name="email">  
-            <label class="text-base"for="phone">Phone:</label>
-            <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Enter your Phone Number" type="tel" id="phone" name="phone">
-            <label class="text-base"for="date">Preferred Date/Time:</label>
-            <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Select a date" id="date" name="date">
-          </form>
-          <div class="flex justify-center">
-            <button class="bg-green-700 text-white py-2 px-4 rounded-4xl my-5 w-64">Sumbit</button>
+
+        <div class="bg-[#F0F4FF] p-5 md:grid md:grid-cols-2 gap-4">
+
+          <!--booking form-->
+          <div class="bg-white flex flex-col mt-10 mx-5 rounded-2xl p-5">
+            <h1 class="text-center font-bold">Booking Form</h1>
+            <form class="flex flex-col space-y-2">
+              <label class="text-base" for="name">Name:</label>
+              <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Enter your Name" type="text" id="name" name="name">
+              <label class="text-base"for="email">Email:</label>
+              <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Enter your Email" type="email" id="email" name="email">  
+              <label class="text-base"for="phone">Phone:</label>
+              <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Enter your Phone Number" type="tel" id="phone" name="phone">
+              <label class="text-base"for="date">Preferred Date/Time:</label>
+              <input class="border rounded-xl w-full focus:border-gray-600 focus:outline-none text-base px-2 py-2 " placeholder="Select a date" id="date" name="date">
+            </form>
+            <div class="flex justify-center">
+              <button class="bg-green-700 text-white py-2 px-4 rounded-4xl my-5 w-64">Sumbit</button>
+            </div>
+          </div>
+
+          <!--contact details-->
+          <div class="mb-15 p-10 space-y-2 ">
+            <h1 class="text-center text-xl font-bold">Get in Touch</h1>
+            <h1 class="font-bold"><ion-icon name="location-outline"></ion-icon>Address:</h1>
+            <p>123 PremierCare Street, Port Harcourt, Nigeria</p>
+            <h1 class="font-bold"><ion-icon name="call-outline"></ion-icon>Phone:</h1>
+            <p>+234 123 4567</p>
+            <h1 class="font-bold"><ion-icon name="mail-outline"></ion-icon>Email:</h1>
+            <p>PremierCare@info.com</p>
+            <h1 class="font-bold">Business Hours:</h1>
+            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
           </div>
         </div>
-        <div class="mb-15 p-10 space-y-2">
-          <h1 class="text-center text-xl font-bold">Get in Touch</h1>
-          <h1 class="font-bold"><ion-icon name="location-outline"></ion-icon>Address:</h1>
-          <p>123 PremierCare Street, Port Harcourt, Nigeria</p>
-          <h1 class="font-bold"><ion-icon name="call-outline"></ion-icon>Phone:</h1>
-          <p>+234 123 4567</p>
-          <h1 class="font-bold"><ion-icon name="mail-outline"></ion-icon>Email:</h1>
-          <p>PremierCare@info.com</p>
-          <h1 class="font-bold">Business Hours:</h1>
-          <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-        </div>
-      </div>
       <div class="absolute inset-x-0 bottom-20 mx-10">
         <div class="w-auto h-64">
           <iframe 
